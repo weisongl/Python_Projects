@@ -23,4 +23,4 @@ if __name__ == "__main__":
             print(f"Good job,{name}! You're doing awesome and great!!!"
                   f"\nThere're {number_of_questions} questions left")
 
-    print(f"")
+    print(f"You're doing great {name}, keep up the good work!")
