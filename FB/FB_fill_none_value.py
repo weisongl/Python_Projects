@@ -1,46 +1,24 @@
+def fill_None(a):
+    n = len(a)
+    if n == 0:
+        return "List is empty"
+    if a[0] is None and len(set(a)) == 1:
+        return 'List is all None'
+
+    for i in range(n - 1):
+        if a[i] is not None and a[i + 1] is None:
+            a[i + 1] = a[i]
+    return a
+
+
 a = [1, None, 1, 2, None]
+a = []
+a = [None, 1, 1, None]
+a = [None]
 
-start_idx = 0
-start_val = ''
-for idx, val in enumerate(a):
-    if val is not None:
-        start_idx = idx
-        start_val  = val
-        break
-print(start_idx)
-
-tmp = a[0]
-for i in range(1,len(a)):
-    if a[i] == None:
-        print(a[i])
-        a[i] = tmp
-    tmp = a[i]
-
-print(a)
-
-
-
-import random
-random.randrange(1,100)
-
-
-a = [0,1,2,3,4,5]
-
-[val for idx, val in enumerate(a,1) if idx %2 == 0]
-a=[1,1,1]
-tmp = a[0]
-
-for i in range(1,len(a)):
-    tmp += a[i]
-    a[i] = tmp
-
-i
-list(map(int,str(133)))
-
-
-a = [1, 1, 5, 5, 10, 8, 7]
-a = [-10, -4, -2, -4, -2, 0]
-a.sort()
-a
-a = a[1:-1]
-'{:.2f}'.format(sum(a)//len(a))
+fill_None(a)
+"""
+edge case, len(a) == 0 
+a only has None
+first new are none. 
+"""
