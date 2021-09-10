@@ -1,3 +1,19 @@
+
+a = {'BreakingBad':100,'UA':100 ,'GameOfThrones':1292, 'GP':1292,'TMKUC' : 88}
+sorted_val = sorted(a.values())
+del sorted_val[max(sorted_val)]
+
+
+
+
+
+
+
+
+
+
+
+
 def get_nth(a,n):
     if n == 0 or len(set(a.values())) < n:
         return '{}th largest value doesn\'t exist'.format(n)
