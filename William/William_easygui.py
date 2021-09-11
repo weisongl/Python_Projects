@@ -12,6 +12,8 @@ if __name__ == "__main__":
     msgbox("You chose: " + str(choice), "")
 
     number_of_questions = int(enterbox(f'How many questions do you want to solve ', 'number of questions'))
+    correct_number = 0
+    total_number = number_of_questions
 
     while number_of_questions > 0:
         number_of_questions -= 1
@@ -22,6 +24,7 @@ if __name__ == "__main__":
         if choice == 'Plus':
             answer = enterbox(f'What is {a} + {b} ', f' Your {choice} question')
             if answer == str(a + b):
+                correct_number +=1
                 msgbox(f"Good job,{name}! You're doing awesome and great!!!"
                       f"\nThere're {number_of_questions} questions left")
                 print(f"Good job,{name}! You're doing awesome and great!!!"
@@ -32,6 +35,7 @@ if __name__ == "__main__":
                 print(f"Sorry,{name}! No the right answer!!!"
                       f"\nThere're {number_of_questions} questions left")
         elif choice == 'Minus':
+            correct_number += 1
             answer = enterbox(f'What is {a} - {b} ', f' Your {choice} question')
             if answer == str(a - b):
                 msgbox(f"Good job,{name}! You're doing awesome and great!!!"
@@ -44,4 +48,4 @@ if __name__ == "__main__":
                 print(f"Sorry,{name}! No the right answer!!!"
                       f"\nThere're {number_of_questions} questions left")
 
-    msgbox(f"You're doing great {name}, keep up the good work!")
+    msgbox(f"You're doing great {name}, keep up the good work! you got {correct_number*100.0/total_number}%")
