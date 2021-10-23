@@ -1,4 +1,5 @@
 from easygui import *
+import pandas as pd
 from random import random, randrange
 
 if __name__ == "__main__":
