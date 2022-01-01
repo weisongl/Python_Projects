@@ -6,6 +6,12 @@ if __name__ == "__main__":
     name = enterbox(f'What is your name: ', 'Name')
     msgbox(f"Hello, {name}!")
 
+    msg = f"Hi {name}, what level of difficulty you want?"
+    title = "William's math game!"
+    choices = ["easy", "medium", "hard"]
+    difficulty = choicebox(msg, title, choices)
+
+
     msg = f"Hi {name},Which math do you want to do?"
     title = "William's math game!"
     choices = ["Plus", "Minus", "Multiplication","Plus and Minus","All!!!!!"]
@@ -20,8 +26,18 @@ if __name__ == "__main__":
 
     while number_of_questions > 0:
         number_of_questions -= 1
-        a = randrange(1, 11)
-        b = randrange(1, 11)
+        if difficulty == 'easy':
+            a = randrange(1, 11)
+            b = randrange(1, 11)
+        elif difficulty == 'medium':
+            a = randrange(5, 16)
+            b = randrange(1, 11)
+        elif difficulty == 'hard':
+            a = randrange(5, 16)
+            b = randrange(5, 16)
+
+
+
         # answer = enterbox(f'What is {a} + {b} ', f' Your {choice} question')
 
         if all_choice_flag:
@@ -57,8 +73,15 @@ if __name__ == "__main__":
                 print(f"Sorry,{name}! No the right answer!!!"
                       f"\nThere're {number_of_questions} questions left")
         elif choice == "Multiplication":
-            a = randrange(1, 5)
-            b = randrange(1, 3)
+            if difficulty =='easy':
+                a = randrange(1, 5)
+                b = randrange(1, 3)
+            elif difficulty == 'mediumn':
+                a = randrange(2, 8)
+                b = randrange(2, 5)
+            elif difficulty == 'hard':
+                a = randrange(2, 8)
+                b = randrange(2, 8)
             answer = enterbox(f'What is {a} × {b} ', f' Your {choice} question')
             if answer == str(a * b):
                 correct_number += 1
