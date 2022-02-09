@@ -77,11 +77,11 @@ if __name__ == "__main__":
                 a = randrange(1, 5)
                 b = randrange(1, 3)
             elif difficulty == 'mediumn':
-                a = randrange(2, 8)
-                b = randrange(2, 5)
+                a = randrange(1, 8)
+                b = randrange(1, 5)
             elif difficulty == 'hard':
-                a = randrange(2, 8)
-                b = randrange(2, 8)
+                a = randrange(1, 8)
+                b = randrange(1, 8)
             answer = enterbox(f'What is {a} × {b} ', f' Your {choice} question')
             if answer == str(a * b):
                 correct_number += 1
