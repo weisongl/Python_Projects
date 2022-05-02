@@ -1,9 +1,11 @@
 import turtle as t
 import math,turtle
 
+debug_flag = True
+
 # 设置速度
-t.speed(1000)  # 速度
-t.delay(5)  # 延迟
+t.speed(9999999999)  # 速度
+t.delay(0)  # 延迟
 # turtle.tracer(False)
 # 双耳
 # 左耳
@@ -59,15 +61,16 @@ t.setheading(-45)
 t.begin_fill()
 t.pendown()
 a = 0.2
-for i in range(120):
-    if 0 <= i < 30 or 60 <= i < 90:
-        a = a + 0.1
-        t.lt(3)  # 向左转3度
-        t.fd(a)  # 向前走a的步长
-    else:
-        a = a - 0.1
-        t.lt(3)
-        t.fd(a)
+if not debug_flag:
+    for i in range(120):
+        if 0 <= i < 30 or 60 <= i < 90:
+            a = a + 0.1
+            t.lt(3)  # 向左转3度
+            t.fd(a)  # 向前走a的步长
+        else:
+            a = a - 0.1
+            t.lt(3)
+            t.fd(a)
 t.end_fill()
 # 眼白
 t.fillcolor("white")
@@ -98,15 +101,16 @@ t.pencolor("black")
 t.begin_fill()
 t.pendown()
 a = 0.2
-for i in range(120):
-    if 0 <= i < 30 or 60 <= i < 90:
-        a = a + 0.1
-        t.lt(3)  # 向左转3度
-        t.fd(a)  # 向前走a的步长
-    else:
-        a = a - 0.1
-        t.lt(3)
-        t.fd(a)
+if not debug_flag :
+    for i in range(120):
+        if 0 <= i < 30 or 60 <= i < 90:
+            a = a + 0.1
+            t.lt(3)  # 向左转3度
+            t.fd(a)  # 向前走a的步长
+        else:
+            a = a - 0.1
+            t.lt(3)
+            t.fd(a)
 t.end_fill()
 # 眼白
 t.fillcolor("white")
@@ -277,85 +281,91 @@ t.setheading(90)
 t.pendown()
 t.pencolor("red")
 a = 1
-for i in range(120):
-    if 0 <= i < 30 or 60 <= i < 90:  # 控制a的变化
-        a = a + 0.25
-        t.lt(3)  # 向左转3度
-        t.fd(a)  # 向前走a的步长
-    else:
-        a = a - 0.25
-        t.lt(3)
-        t.fd(a)
+if not debug_flag:
+    for i in range(120):
+        if 0 <= i < 30 or 60 <= i < 90:  # 控制a的变化
+            a = a + 0.25
+            t.lt(3)  # 向左转3度
+            t.fd(a)  # 向前走a的步长
+        else:
+            a = a - 0.25
+            t.lt(3)
+            t.fd(a)
 t.pencolor("orange")
 t.penup()
 t.goto(66, 120)
 t.pendown()
 a = 1
-for i in range(120):
-    if 0 <= i < 30 or 60 <= i < 90:
-        a = a + 0.255
-        t.lt(3)
-        t.fd(a)
-    else:
-        a = a - 0.255
-        t.lt(3)
-        t.fd(a)
+if not debug_flag:
+    for i in range(120):
+        if 0 <= i < 30 or 60 <= i < 90:
+            a = a + 0.255
+            t.lt(3)
+            t.fd(a)
+        else:
+            a = a - 0.255
+            t.lt(3)
+            t.fd(a)
 t.pencolor("green")
 t.penup()
 t.goto(67, 120)
 t.pendown()
 a = 1
-for i in range(120):
-    if 0 <= i < 30 or 60 <= i < 90:
-        a = a + 0.2555
-        t.lt(3)
-        t.fd(a)
-    else:
-        a = a - 0.2555
-        t.lt(3)
-        t.fd(a)
+if not debug_flag:
+    for i in range(120):
+        if 0 <= i < 30 or 60 <= i < 90:
+            a = a + 0.2555
+            t.lt(3)
+            t.fd(a)
+        else:
+            a = a - 0.2555
+            t.lt(3)
+            t.fd(a)
 t.pencolor("deep sky blue")
 t.penup()
 t.goto(68, 120)
 t.pendown()
 a = 1
-for i in range(120):
-    if 0 <= i < 30 or 60 <= i < 90:
-        a = a + 0.25955
-        t.lt(3)
-        t.fd(a)
-    else:
-        a = a - 0.25955
-        t.lt(3)
-        t.fd(a)
+if not debug_flag:
+    for i in range(120):
+        if 0 <= i < 30 or 60 <= i < 90:
+            a = a + 0.25955
+            t.lt(3)
+            t.fd(a)
+        else:
+            a = a - 0.25955
+            t.lt(3)
+            t.fd(a)
 t.pencolor("pink")
 t.penup()
 t.goto(71, 120)
 t.pendown()
 a = 1
-for i in range(120):
-    if 0 <= i < 30 or 60 <= i < 90:
-        a = a + 0.26
-        t.lt(3)
-        t.fd(a)
-    else:
-        a = a - 0.26
-        t.lt(3)
-        t.fd(a)
+if not debug_flag:
+    for i in range(120):
+        if 0 <= i < 30 or 60 <= i < 90:
+            a = a + 0.26
+            t.lt(3)
+            t.fd(a)
+        else:
+            a = a - 0.26
+            t.lt(3)
+            t.fd(a)
 t.pencolor("purple")
 t.penup()
 t.goto(72, 120)
 t.pendown()
 a = 1
-for i in range(120):
-    if 0 <= i < 30 or 60 <= i < 90:
-        a = a + 0.269
-        t.lt(3)
-        t.fd(a)
-    else:
-        a = a - 0.269
-        t.lt(3)
-        t.fd(a)
+if not debug_flag:
+    for i in range(120):
+        if 0 <= i < 30 or 60 <= i < 90:
+            a = a + 0.269
+            t.lt(3)
+            t.fd(a)
+        else:
+            a = a - 0.269
+            t.lt(3)
+            t.fd(a)
 
 # 五环
 t.penup()
@@ -388,20 +398,36 @@ t.circle(10)
 printer = t.Turtle()
 printer.hideturtle()
 printer.penup()
-printer.goto(200,150)
-printer.write("你\n\n",move = True, align="left", font=("楷体", 31, "bold"))
 printer.goto(200,100)
-printer.write("好\n\n",move = True, align="left", font=("楷体", 31, "bold"))
-printer.goto(200,50)
+# printer.write("你\n\n",move = True, align="left", font=("楷体", 31, "bold"))
+# printer.goto(200,100)
+# printer.write("我\n\n",move = True, align="left", font=("楷体", 31, "bold"))
+# printer.goto(200,100)
 printer.write("我\n\n",move = True, align="left", font=("楷体", 31, "bold"))
-printer.goto(200,0)
+printer.goto(200,50)
 printer.write("是\n\n",move = True, align="left", font=("楷体", 31, "bold"))
+printer.goto(200,0)
+printer.write("冰\n\n",move = True, align="left", font=("楷体", 31, "bold"))
 printer.goto(200,-50)
-printer.write("周\n\n",move = True, align="left", font=("楷体", 31, "bold"))
+printer.write("墩\n\n",move = True, align="left", font=("楷体", 31, "bold"))
 printer.goto(200,-100)
-printer.write("杨\n\n",move = True, align="left", font=("楷体", 31, "bold"))
-printer.goto(200,-150)
-printer.write("杨\n\n",move = True, align="left", font=("楷体", 31, "bold"))
+printer.write("墩\n\n",move = True, align="left", font=("楷体", 31, ))
+# printer.goto(200,-150)
+# printer.write("杨\n\n",move = True, align="left", font=("楷体", 31, "bold"))
+# printer.write("我\n\n",move = True, align="left", font=("楷体", 31, "bold"))
+# printer.goto(200,50)
+printer.write("你\n\n",move = True, align="right", font=("楷体", 31, "bold"))
+printer.goto(-250,100)
+printer.write("你\n\n",move = True, align="right", font=("楷体", 31, "bold"))
+printer.goto(-250,50)
+printer.write("好\n\n",move = True, align="right", font=("楷体", 31, "bold"))
+printer.goto(-250,0)
+printer.write("马\n\n",move = True, align="right", font=("楷体", 31, "bold"))
+printer.goto(-250,-50)
+printer.write("姑\n\n",move = True, align="right", font=("楷体", 31, "bold"))
+printer.goto(-250,-100)
+printer.write("姑\n\n",move = True, align="right", font=("楷体", 31, "bold"))
+
 
 t.penup()
 turtle.pencolor("black")
