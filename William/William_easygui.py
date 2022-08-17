@@ -94,5 +94,5 @@ if __name__ == "__main__":
                        f"\nThere're {number_of_questions} questions left")
                 print(f"Sorry,{name}! No the right answer!!!"
                       f"\nThere're {number_of_questions} questions left")
-    score = "{:.2f}".format(correct_number * 100.0 / total_number)
+    score = "{:.2f}".format(correct_number * 100 / total_number)
     msgbox(f"You're doing great {name}, keep up the good work! you got {score} points")
