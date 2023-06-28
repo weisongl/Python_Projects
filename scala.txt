@@ -1,0 +1,26 @@
+val PLAYER_RATING_TRANS_DTL_TEMP_DF: DataFrame = spark.table(s"$inputDBName.${inputTblsConfig.getString("PLAYER_RATING_TRANS_DTL_TBL")}").where(F.col("etl_del_rec_ind") === 0)
+
+val compDashboardOutput_DF: DataFrame = spark.table(s"$inputDBName.${inputTblsConfig.getString("compDashboardOutputTblnm")}")
+val HTL_RO_CHANNEL_MAPPING_DTL_DF: DataFrame = spark.table(s"$inputDBName.${inputTblsConfig.getString("HTL_RO_CHANNEL_MAPPING_DTL_TBL")}").where(F.col("etl_del_rec_ind") === 0)
+val player_host_prop_mn_rel_dtl_DF: DataFrame = spark.table(s"$inputDBName.${inputTblsConfig.getString("player_host_prop_mn_rel_dtl")}")
+val GM_COUPON_RDM_TRANS_DTL_DF: DataFrame = spark.table(s"$inputDBName.${inputTblsConfig.getString("GM_COUPON_RDM_TRANS_DTL_TBL")}").where(F.col("etl_del_rec_ind") === 0)
+val CAMPAIGN_EXCLD_INFO_DF: DataFrame = spark.table(s"$inputDBName.${inputTblsConfig.getString("CAMPAIGN_EXCLD_INFO_TBL")}")
+val gm_htl_resv_rel_dtl_DF: DataFrame = spark.table(s"$inputDBName.${inputTblsConfig.getString("gm_htl_resv_rel_dtlTblNm")}").where(F.col("etl_del_rec_ind") === 0)
+val fin_gl_ea_co_dim_info_DF: DataFrame = spark.table(s"$inputDBName.${inputTblsConfig.getString("fin_gl_ea_co_dim_infoTblNm")}").where(F.col("etl_active_rec_ind") === 1 and F.col("etl_del_rec_ind") === 0)
+
+val CAMPAIGN_CD_MATRIX_INFO_DF: DataFrame = spark.table(s"$inputDBName.${inputTblsConfig.getString("CAMPAIGN_CD_MATRIX_INFO_TBLNm")}")
+
+val ENT_AMPERITY_ACCT_XREF_DF: DataFrame = spark.table(s"$inputDBName.${inputTblsConfig.getString("ENT_AMPERITY_ACCT_XREF_TBL")}").where("(( status_cd != 'D' and status_cd !='M' or status_cd is null and src_sys_id = 1 ) or  src_sys_id != 1 ) and scdCurrent = true")
+val AmperityC360CurrentDetail_DF: DataFrame = spark.table(s"$inputDBName.${inputTblsConfig.getString("AmperityC360CurrentDetailTblnm")}").where(F.col("scdCurrent") === true)
+val superTrip_DF: DataFrame = spark.table(s"$inputDBName.${inputTblsConfig.getString("superTripOutputTblnm")}").where(F.col("scdCurrent") === true)
+
+ val CAMPAIGN_CD_MATRIX_INFO_DF: DataFrame = spark.table(s"$inputDBName.${inputTblsConfig.getString("CAMPAIGN_CD_MATRIX_INFO_TBLNm")}")
+
+    val ENT_AMPERITY_ACCT_XREF_DF: DataFrame = spark.table(s"$inputDBName.${inputTblsConfig.getString("ENT_AMPERITY_ACCT_XREF_TBL")}").where("(( status_cd != 'D' and status_cd !='M' or status_cd is null and src_sys_id = 1 ) or  src_sys_id != 1 ) and scdCurrent = true")
+    val AmperityC360CurrentDetail_DF: DataFrame = spark.table(s"$inputDBName.${inputTblsConfig.getString("AmperityC360CurrentDetailTblnm")}").where(F.col("scdCurrent") === true)
+    val superTrip_DF: DataFrame = spark.table(s"$inputDBName.${inputTblsConfig.getString("superTripOutputTblnm")}").where(F.col("scdCurrent") === true)
+
+    val masterLink_df: DataFrame = spark.table(s"$inputDBName.${outputTblsConfig.getString("masterLinkOutputTblnm")}")
+    val FP_ISSUED_DETAIL_VW_2_DF: DataFrame = spark.table(s"$inputDBName.${outputTblsConfig.getString("FP_ISSUED_DETAIL_VW_2_TBL")}")
+    val CORPORATE_HOTEL_TRANSACTIONS_VW_DF: DataFrame = spark.table(s"$inputDBName.${outputTblsConfig.getString("CORPORATE_HOTEL_TRANSACTIONS_VW_TBL")}")
+    val ResortFeeComp_DF: DataFrame = spark.table(s"$inputDBName.${outputTblsConfig.getString("RESORTFEE_TBL")}")

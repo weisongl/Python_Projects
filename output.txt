@@ -1,0 +1,64 @@
+player_rating_trans_dtl_tbl_DF AS (
+     select 
+ from  player_rating_trans_dtl_tbl where etl_del_rec_ind = 0
+  ),
+compdashboardoutputtblnm_DF AS (
+     select 
+ from  compdashboardoutputtblnm
+  ),
+htl_ro_channel_mapping_dtl_tbl_DF AS (
+     select 
+ from  htl_ro_channel_mapping_dtl_tbl where etl_del_rec_ind = 0
+  ),
+player_host_prop_mn_rel_dtl_DF AS (
+     select src_sys_id, begin_mn_dt, player_id, host_user_id, site_id, ent_prop_cd, domain_cd, grp_txt, regn_cd, sub_regn_cd, bus_type_cd, team_cd, ptr_item_cd, seg_cd, trip_num_cnt, gm_day_cnt, src_upd_dttm, etl_job_id, etl_batch_id, etl_ins_user_id, etl_upd_user_id, etl_ins_dttm, etl_upd_dttm
+ from  player_host_prop_mn_rel_dtl
+  ),
+gm_coupon_rdm_trans_dtl_tbl_DF AS (
+     select 
+ from  gm_coupon_rdm_trans_dtl_tbl where etl_del_rec_ind = 0
+  ),
+campaign_excld_info_tbl_DF AS (
+     select 
+ from  campaign_excld_info_tbl
+  ),
+gm_htl_resv_rel_dtltblnm_DF AS (
+     select 
+ from  gm_htl_resv_rel_dtltblnm where etl_del_rec_ind = 0
+  ),
+fin_gl_ea_co_dim_infotblnm_DF AS (
+     select 
+ from  fin_gl_ea_co_dim_infotblnm where etl_active_rec_ind = 1 and etl_del_rec_ind = 0
+  ),
+campaign_cd_matrix_info_tblnm_DF AS (
+     select 
+ from  campaign_cd_matrix_info_tblnm
+  ),
+ent_amperity_acct_xref_tbl_DF AS (
+     select 
+ from  ent_amperity_acct_xref_tbl where "(( status_cd != 'D' and status_cd !='M' or status_cd is null and src_sys_id = 1 ) or  src_sys_id != 1 ) and scdCurrent = true"
+  ),
+amperityc360currentdetailtblnm_DF AS (
+     select 
+ from  amperityc360currentdetailtblnm where scdCurrent = true
+  ),
+supertripoutputtblnm_DF AS (
+     select 
+ from  supertripoutputtblnm where scdCurrent = true
+  ),
+campaign_cd_matrix_info_tblnm_DF AS (
+     select 
+ from  campaign_cd_matrix_info_tblnm
+  ),
+ent_amperity_acct_xref_tbl_DF AS (
+     select 
+ from  ent_amperity_acct_xref_tbl where "(( status_cd != 'D' and status_cd !='M' or status_cd is null and src_sys_id = 1 ) or  src_sys_id != 1 ) and scdCurrent = true"
+  ),
+amperityc360currentdetailtblnm_DF AS (
+     select 
+ from  amperityc360currentdetailtblnm where scdCurrent = true
+  ),
+supertripoutputtblnm_DF AS (
+     select 
+ from  supertripoutputtblnm where scdCurrent = true
+  ),
